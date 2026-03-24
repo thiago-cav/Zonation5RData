@@ -1,0 +1,11 @@
+^.*\.Rproj$
+^\.Rproj\.user$
+^\.github$
+^LICENSE\.md$
+^cran-comments\.md$
+^\.git$
+^.*\.DS_Store$
+^\.gitignore$
+^\.cursor$
+^\.cursorignore$
+^data-raw$
