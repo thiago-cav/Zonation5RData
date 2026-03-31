@@ -1,4 +1,6 @@
-# Package Overview
+---
+title: "Zonation5RData Overview"
+---
 
 ## Directory layout (in `inst/extdata/`)
 
@@ -21,7 +23,7 @@ This folder contains supporting spatial data used in Zonation analyses, such as 
 
 ### 2.1 Cost Layer
 
-The gHM layer is derived from the [**Global Human Modification (gHM)**](https://developers.google.com/earth-engine/datasets/catalog/CSP_HM_GlobalHumanModification) dataset, which provides a comprehensive measure of human alteration of terrestrial lands worldwide, originally at 1 km² resolution. Values range from 0 to 1.0, representing the proportion and intensity of human modification for specific stressors (e.g., human settlement, agriculture, infrastructure). The data were retrieved and processed using Google Earth Engine (Figure 3.4).
+The gHM layer is derived from the [**Global Human Modification (gHM)**](https://developers.google.com/earth-engine/datasets/catalog/CSP_HM_GlobalHumanModification) dataset, which provides a comprehensive measure of human alteration of terrestrial lands worldwide, originally at 1 km² resolution. Values range from 0 to 1.0, representing the proportion and intensity of human modification for specific stressors (e.g., human settlement, agriculture, infrastructure). The data were retrieved and processed using Google Earth Engine.
 
 ### 2.2 Area Mask
 

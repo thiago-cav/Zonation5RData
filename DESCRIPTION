@@ -18,3 +18,7 @@ License: MIT + file LICENSE
 Encoding: UTF-8
 Depends: R (>= 4.0.0)
 URL: https://r-pkgs.org/data.html
+Imports: 
+    rmarkdown
+Suggests: 
+    rstudioapi
