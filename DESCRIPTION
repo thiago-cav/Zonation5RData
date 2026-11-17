@@ -1,6 +1,7 @@
 Package: Zonation5RData
 Title: Example Spatial Datasets and Analysis Outputs for ZonationR
 Version: 0.0.1
+Date: 2026-11-17
 Authors@R: c(
     person("Thiago", "Cavalcante", , "thiagocav.ferreira@gmail.com", role = c("aut", "cre"),
            comment = c(ORCID = "0000-0001-5357-9659")),
