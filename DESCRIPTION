@@ -10,11 +10,11 @@ Authors@R: c(
            comment = c(ORCID = "0000-0002-8458-8467"))
             )
 Description: Provides curated spatial datasets and example Zonation 5
-analysis outputs to support teaching, learning, and experimentation
-with 'ZonationR'. The package includes species distribution rasters,
-additional spatial layers, and example conservation prioritization
-results. These materials are intended for educational and demonstration
-purposes and may require further evaluation before use in research.
+    analysis outputs to support teaching, learning, and experimentation
+    with 'ZonationR'. The package includes species distribution rasters,
+    additional spatial layers, and example conservation prioritization
+    results. These materials are intended for educational and demonstration
+    purposes and may require further evaluation before use in research.
 License: MIT + file LICENSE
 Encoding: UTF-8
 Depends: R (>= 4.0.0)
