@@ -1,6 +1,11 @@
 # Zonation5RData
 
-Educational GeoTIFF layers for [Zonation](https://github.com/zonationteam/Zonation5) and [ZonationR](https://github.com/thiago-cav/ZonationR) workflows. Rasters use WGS84 (EPSG:4326). This package is **not** on CRAN; install from GitHub.
+*Zonation5RData* provides curated spatial datasets and example Zonation 5 analysis outputs designed to support teaching, learning, and experimentation with [ZonationR](https://github.com/thiago-cav/ZonationR), an R package for working with [Zonation 5](https://github.com/zonationteam/Zonation5).
+
+The datasets are derived from freely available, referenced sources and have been processed and organized to facilitate the exploration of ZonationR functionalities and spatial conservation prioritization workflows.
+
+These materials are intended for educational and demonstration purposes and may not be suitable for real-world research applications without further evaluation. Users are encouraged to acknowledge Zonation5RData and cite the original data sources when using these materials.
+
 
 ## Installation
 
@@ -18,54 +23,56 @@ remotes::install_github("thiago-cav/Zonation5RData")
 
 ## Usage
 
-After installation, data live under `inst/extdata` in the package sources. From R:
+After installation, the datasets can be accessed using the package's helper functions.
 
 ```r
 library(Zonation5RData)
 
-# Root of packaged extdata
+# Locate the data directory
 zonation5rdata_root()
 
-# List top-level names under extdata
-zonation5rdata_example()
+# List available biodiversity layers
+zonation5rdata_list("biodiversity")
 
-# List every file under extdata/biodiversity/ (e.g. all species GeoTIFFs)
-head(zonation5rdata_list("biodiversity"))
-length(zonation5rdata_list("biodiversity"))
+# List additional spatial layers
+zonation5rdata_list("other_layers")
 
-# Absolute paths (e.g. for terra::rast(), or batch processing)
-# head(zonation5rdata_list("biodiversity", full.names = TRUE))
-
-# Only files directly in other_layers/ (no subfolders)
-zonation5rdata_list("other_layers", recursive = FALSE)
-
-# Resolved path to one file (errors if missing)
-zonation5rdata_example("other_layers/gHM_Europe.tif")
-
-# Same via components:
+# Access individual files
 zonation5rdata_path("biodiversity", "Fagus_sylvatica.tif")
 zonation5rdata_path("other_layers", "gHM_Europe.tif")
-zonation5rdata_path("other_layers", "area_mask.tif")
+
+# Access example Zonation 5 analysis outputs
+zonation5rdata_path("01_baseline", "output", "rankmap.tif")
 ```
 
-To read a raster (example with **terra**):
+Spatial layers can be loaded directly into R using packages such as `terra`:
 
 ```r
-# install.packages("terra")
-# terra::rast(zonation5rdata_path("other_layers", "gHM_Europe.tif", must_work = TRUE))
+library(terra)
+
+r <- rast(zonation5rdata_path(
+  "biodiversity", "Fagus_sylvatica.tif"
+))
+
+plot(r)
 ```
 
-## Contents and attribution
+For detailed descriptions of the datasets, their sources, and attribution requirements:
 
-Layer descriptions, folder layout, and references can be accessed with:
 ```r
 zonation5rdata_info()
 ```
 
+## Citation and attribution
 
+If you use these materials, please cite *Zonation5RData* and the original data sources listed in [`metadata.md`](inst/extdata/metadata.md).
 
-Please cite this package and the original data sources (see `metadata.md`) when you use these materials.
+To obtain the package citation in R:
+
+```r
+citation("Zonation5RData")
+```
 
 ## Licence
 
-Package code: MIT (see `LICENSE`). Data layers retain their original licences and citation requirements as described in `metadata.md`.
+The package code is licensed under the [MIT Licence](LICENSE). The included datasets retain their original licences and attribution requirements, as documented in [`metadata.md`](inst/extdata/metadata.md).
