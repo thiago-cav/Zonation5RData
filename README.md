@@ -1,22 +1,23 @@
 # Zonation5RData
 
-*Zonation5RData* provides curated spatial datasets and example Zonation 5 analysis outputs designed to support teaching, learning, and experimentation with [ZonationR](https://github.com/thiago-cav/ZonationR), an R package for working with [Zonation 5](https://github.com/zonationteam/Zonation5).
-
-The datasets are derived from freely available, referenced sources and have been processed and organized to facilitate the exploration of ZonationR functionalities and spatial conservation prioritization workflows.
-
-These materials are intended for educational and demonstration purposes and may not be suitable for real-world research applications without further evaluation. Users are encouraged to acknowledge Zonation5RData and cite the original data sources when using these materials.
-
+*Zonation5RData* provides curated spatial datasets and example Zonation 5 outputs to 
+support teaching, learning, and experimentation with [ZonationR](https://github.com/thiago-cav/ZonationR), 
+an R package that supports conservation prioritization analyses using Zonation 5. The datasets are derived 
+from freely available, referenced sources and have been processed and organized to facilitate the exploration of 
+ZonationR functionalities and spatial conservation prioritization workflows. These materials are intended for 
+educational and demonstration purposes and may not be suitable for real-world research applications without 
+further evaluation. 
 
 ## Installation
 
-```r
+``` r
 # install.packages("pak")  # if needed
 pak::pak("thiago-cav/Zonation5RData")
 ```
 
 Or with **remotes**:
 
-```r
+``` r
 # install.packages("remotes")
 remotes::install_github("thiago-cav/Zonation5RData")
 ```
@@ -25,7 +26,7 @@ remotes::install_github("thiago-cav/Zonation5RData")
 
 After installation, the datasets can be accessed using the package's helper functions.
 
-```r
+``` r
 library(Zonation5RData)
 
 # Locate the data directory
@@ -47,7 +48,7 @@ zonation5rdata_path("01_baseline", "output", "rankmap.tif")
 
 Spatial layers can be loaded directly into R using packages such as `terra`:
 
-```r
+``` r
 library(terra)
 
 r <- rast(zonation5rdata_path(
@@ -59,7 +60,7 @@ plot(r)
 
 For detailed descriptions of the datasets, their sources, and attribution requirements:
 
-```r
+``` r
 zonation5rdata_info()
 ```
 
@@ -69,7 +70,7 @@ If you use these materials, please cite *Zonation5RData* and the original data s
 
 To obtain the package citation in R:
 
-```r
+``` r
 citation("Zonation5RData")
 ```
 
