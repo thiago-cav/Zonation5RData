@@ -7,7 +7,7 @@ title: "Zonation5RData Overview"
 | Path | Contents |
 |------|----------|
 | `biodiversity/` | EU-Trees4F SDM rasters (one GeoTIFF per species; filenames use underscore-separated Latin names). |
-| `other_layers/` | Cost (`gHM_Europe.tif`, gHM-derived), planning mask (`area_mask.tif`), and administrative units (`administrative_units.tif`). |
+| `other_layers/` | Supporting spatial data used in Zonation analyses, such as cost or mask layers. |
 | `01_baseline/` | Output files from a baseline Zonation prioritization analysis. |
 | `metadata.md` | This file: sources and attribution. |
 
