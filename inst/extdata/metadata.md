@@ -7,7 +7,7 @@ title: "Zonation5RData Overview"
 | Path | Contents |
 |------|----------|
 | `biodiversity/` | EU-Trees4F SDM rasters (one GeoTIFF per species; filenames use underscore-separated Latin names). |
-| `other_layers/` | Cost (`gHM_Europe.tif`, gHM-derived) and planning mask (`area_mask.tif`). |
+| `other_layers/` | Cost (`gHM_Europe.tif`, gHM-derived), planning mask (`area_mask.tif`), and administrative units (`administrative_units.tif`). |
 | `01_baseline/` | Output files from a baseline Zonation prioritization analysis. |
 | `metadata.md` | This file: sources and attribution. |
 
@@ -28,6 +28,10 @@ The gHM layer is derived from the [**Global Human Modification (gHM)**](https://
 ### 2.2 Area Mask
 
 The area mask layer was created by rasterizing the boundaries of European countries, excluding certain overseas territories (e.g., the Canary Islands and the Azores). This layer defines the spatial extent for the study, ensuring analyses are limited to the target regions.
+
+### 2.3 Administrative Units
+
+The `administrative_units.tif` layer provides a simplified division of Europe into three regions: Northern (1), Central (2), and Southern (3). The regions were created using country boundaries from [Natural Earth](https://www.naturalearthdata.com/) and are intended as a toy example for demonstrating adminstrative units analyses in Zonation.
 
 ## 3. Baseline Zonation Output
 
