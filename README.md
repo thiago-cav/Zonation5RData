@@ -51,7 +51,7 @@ plot(r)
 
 ## Reproducible R scripts
 
-The package includes reproducible R scripts demonstrating different ZonationR workflows. Users can list and open the available scripts in their R editor.
+The package includes reproducible R scripts demonstrating different ZonationR workflows. Users can inspect them and save copies to adapt for their own analyses.
 
 ``` r
 # List available scripts
@@ -60,8 +60,6 @@ zonation5rdata_list_scripts()
 # Open a selected script
 zonation5rdata_get_script("administrative_units")
 ```
-
-Scripts are not executed automatically. Users can inspect them and save copies to adapt for their own analyses.
 
 
 ## Citation and attribution
