@@ -353,8 +353,8 @@ display: none;
 </div>
 
 
-<div id="directory-layout-in-instextdata" class="section level2">
-<h2>Directory layout (in <code>inst/extdata/</code>)</h2>
+<div id="directory-layout" class="section level2">
+<h2>Directory layout</h2>
 <table>
 <colgroup>
 <col width="37%" />
@@ -368,38 +368,30 @@ display: none;
 </thead>
 <tbody>
 <tr class="odd">
-<td><code>biodiversity/</code></td>
+<td><code>inst/extdata/biodiversity/</code></td>
 <td>EU-Trees4F SDM rasters (one GeoTIFF per species; filenames use
 underscore-separated Latin names).</td>
 </tr>
 <tr class="even">
-<td><code>other_layers/</code></td>
-<td>Cost (<code>gHM_Europe.tif</code>, gHM-derived), planning mask
-(<code>area_mask.tif</code>), and administrative units
-(<code>administrative_units.tif</code>).</td>
+<td><code>inst/extdata/other_layers/</code></td>
+<td>Supporting spatial layers, including the cost layer, area mask, and
+administrative units.</td>
 </tr>
 <tr class="odd">
-<td><code>01_baseline/</code></td>
+<td><code>inst/extdata/01_baseline/</code></td>
 <td>Output files from a baseline Zonation prioritization analysis.</td>
 </tr>
 <tr class="even">
-<td><code>metadata.md</code></td>
-<td>This file: sources and attribution.</td>
+<td><code>inst/extdata/metadata.md</code></td>
+<td>This file: descriptions of package contents, data sources, and
+attribution.</td>
+</tr>
+<tr class="odd">
+<td><code>inst/scripts/</code></td>
+<td>Reproducible R scripts demonstrating ZonationR workflows.</td>
 </tr>
 </tbody>
 </table>
-<p>This package contains a curated dataset designed for educational
-purposes within the Zonation software framework. The dataset has been
-processed and organized to facilitate learning and experimentation,
-using freely available data that are fully referenced. The main
-objective is to provide an accessible resource for educators and
-students to explore <em>ZonationR</em> capabilities and deepen their
-understanding of spatial conservation planning. Please note that this
-dataset (or parts of it) may not fully align with real-world research
-requirements. Please acknowledge this package and all included materials
-when using them in your work. All raster layers are stored as GeoTIFF
-files and are georeferenced to the WGS84 coordinate reference system
-(EPSG:4326).</p>
 </div>
 <div id="biodiversity-features" class="section level2">
 <h2>1. Biodiversity Features</h2>
@@ -449,6 +441,25 @@ from a baseline Zonation prioritization analysis using the biodiversity
 and supporting layers included in this package. The folder includes
 files such as rank maps, performance curves, and summary statistics
 produced by the Zonation software.</p>
+</div>
+<div id="reproducible-r-scripts" class="section level2">
+<h2>4. Reproducible R Scripts</h2>
+<p>The <code>inst/scripts/</code> folder contains reproducible R scripts
+demonstrating conservation prioritization workflows using ZonationR and
+the datasets provided in this package.</p>
+<p>Two example scripts are included:</p>
+<ul>
+<li><code>multiple_prioritisation_variants.R</code>: Demonstrates four
+prioritization variants (baseline, CAZMAX, weights, and cost), including
+comparisons of prioritization outputs.</li>
+<li><code>administrative_units.R</code>: Demonstrates prioritization
+analyses for individual administrative units and multiple units using
+the <code>administrative_units.tif</code> layer.</li>
+</ul>
+<p>The scripts can be accessed using
+<code>zonation5rdata_list_scripts()</code> and
+<code>zonation5rdata_get_script()</code>. They require ZonationR and a
+local installation of Zonation 5 to run.</p>
 </div>
 <div id="references" class="section level1">
 <h1>References</h1>

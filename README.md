@@ -1,8 +1,7 @@
 # Zonation5RData
 
-*Zonation5RData* provides curated spatial datasets and example Zonation 5 outputs to 
-support teaching, learning, and experimentation with [ZonationR](https://github.com/thiago-cav/ZonationR), 
-an R package that supports conservation prioritization analyses using Zonation 5. The datasets are derived 
+*Zonation5RData* provides curated spatial datasets, Zonation 5 outputs, and reproducible R scripts to 
+support teaching, learning, and experimentation with [ZonationR](https://github.com/thiago-cav/ZonationR). The datasets are derived 
 from freely available, referenced sources and have been processed and organized to facilitate the exploration of 
 ZonationR functionalities and spatial conservation prioritization workflows. These materials are intended for 
 educational and demonstration purposes and may not be suitable for real-world research applications without 
@@ -58,11 +57,20 @@ r <- rast(zonation5rdata_path(
 plot(r)
 ```
 
-For detailed descriptions of the datasets, their sources, and attribution requirements:
+## Reproducible R scripts
+
+The package includes reproducible R scripts demonstrating different ZonationR workflows. Users can list and open the available scripts in their R editor.
 
 ``` r
-zonation5rdata_info()
+# List available scripts
+zonation5rdata_list_scripts()
+
+# Open a selected script
+zonation5rdata_get_script("administrative_units")
 ```
+
+Scripts are not executed automatically. Users can inspect them and save copies to adapt for their own analyses.
+
 
 ## Citation and attribution
 
@@ -72,6 +80,11 @@ To obtain the package citation in R:
 
 ``` r
 citation("Zonation5RData")
+```
+For detailed descriptions of the datasets, their sources, and attribution requirements use:
+
+``` r
+zonation5rdata_info()
 ```
 
 ## Licence

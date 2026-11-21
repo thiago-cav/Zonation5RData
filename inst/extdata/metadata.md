@@ -2,16 +2,16 @@
 title: "Zonation5RData Overview"
 ---
 
-## Directory layout (in `inst/extdata/`)
+## Directory layout
 
 | Path | Contents |
 |------|----------|
-| `biodiversity/` | EU-Trees4F SDM rasters (one GeoTIFF per species; filenames use underscore-separated Latin names). |
-| `other_layers/` | Supporting spatial data used in Zonation analyses, such as cost or mask layers. |
-| `01_baseline/` | Output files from a baseline Zonation prioritization analysis. |
-| `metadata.md` | This file: sources and attribution. |
+| `inst/extdata/biodiversity/` | EU-Trees4F SDM rasters (one GeoTIFF per species; filenames use underscore-separated Latin names). |
+| `inst/extdata/other_layers/` | Supporting spatial layers, including the cost layer, area mask, and administrative units. |
+| `inst/extdata/01_baseline/` | Output files from a baseline Zonation prioritization analysis. |
+| `inst/extdata/metadata.md` | This file: descriptions of package contents, data sources, and attribution. |
+| `inst/scripts/` | Reproducible R scripts demonstrating ZonationR workflows. |
 
-This package contains a curated dataset designed for educational purposes within the Zonation software framework. The dataset has been processed and organized to facilitate learning and experimentation, using freely available data that are fully referenced. The main objective is to provide an accessible resource for educators and students to explore *ZonationR* capabilities and deepen their understanding of spatial conservation planning. Please note that this dataset (or parts of it) may not fully align with real-world research requirements. Please acknowledge this package and all included materials when using them in your work. All raster layers are stored as GeoTIFF files and are georeferenced to the WGS84 coordinate reference system (EPSG:4326).
 
 ## 1. Biodiversity Features
 
@@ -36,6 +36,17 @@ The `administrative_units.tif` layer provides a simplified division of Europe in
 ## 3. Baseline Zonation Output
 
 The `01_baseline` folder contains output files generated from a baseline Zonation prioritization analysis using the biodiversity and supporting layers included in this package. The folder includes files such as rank maps, performance curves, and summary statistics produced by the Zonation software.
+
+## 4. Reproducible R Scripts
+
+The `inst/scripts/` folder contains reproducible R scripts demonstrating conservation prioritization workflows using ZonationR and the datasets provided in this package.
+
+Two example scripts are included:
+
+- `multiple_prioritisation_variants.R`: Demonstrates four prioritization variants (baseline, CAZMAX, weights, and cost), including comparisons of prioritization outputs.
+- `administrative_units.R`: Demonstrates prioritization analyses for individual administrative units and multiple units using the `administrative_units.tif` layer.
+
+The scripts can be accessed using `zonation5rdata_list_scripts()` and `zonation5rdata_get_script()`. They require ZonationR and a local installation of Zonation 5 to run.
 
 # References
 
