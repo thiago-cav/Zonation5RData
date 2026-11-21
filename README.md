@@ -10,14 +10,6 @@ further evaluation.
 ## Installation
 
 ``` r
-# install.packages("pak")  # if needed
-pak::pak("thiago-cav/Zonation5RData")
-```
-
-Or with **remotes**:
-
-``` r
-# install.packages("remotes")
 remotes::install_github("thiago-cav/Zonation5RData")
 ```
 
